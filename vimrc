@@ -29,7 +29,9 @@ Plugin 'VundleVim/Vundle.vim'
   Plugin 'christoomey/vim-tmux-navigator'
   " auto align stuff with :Tab
   Plugin 'godlygeek/tabular'
-  
+  " .bf syntax hilighting
+  Plugin 'Beerstorm/vim-brainfuck'
+
 " =====================
 
 
@@ -66,16 +68,17 @@ set nu
 " if you can't figure this one out, vim isnt for you
 colorscheme predawn
   
-" set tabs to 2 spaces
-set expandtab
-set shiftwidth=2
-set softtabstop=2
+set expandtab " Insert spaces instead of tabs
+set smarttab " forces use of shiftwidth and tabstop
+set shiftwidth=2 " Change the number of spaces inserted for indentation
+set tabstop=2 " Tabs insert 2 spaces
 
 " open NERDTree at current dir at start
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
-" close NERDtree if it is the last buffer open
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" close NERDtree if it is the last buffer open (uncomment for use)
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
 " show hidden files in NERDTree by default
 let NERDTreeShowHidden=1
