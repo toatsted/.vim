@@ -31,6 +31,8 @@ Plugin 'VundleVim/Vundle.vim'
   Plugin 'godlygeek/tabular'
   " .bf syntax hilighting
   Plugin 'Beerstorm/vim-brainfuck'
+  " commenting [gc]
+  Plugin 'tpope/vim-commentary'
 
 " =====================
 
