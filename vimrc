@@ -33,6 +33,8 @@ Plugin 'VundleVim/Vundle.vim'
   Plugin 'Beerstorm/vim-brainfuck'
   " commenting [gc]
   Plugin 'tpope/vim-commentary'
+  " handlebars syntax hilighting
+  Plugin 'mustache/vim-mustache-handlebars'
 
 " =====================
 
@@ -84,3 +86,9 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " show hidden files in NERDTree by default
 let NERDTreeShowHidden=1
+let NERDTreeIgnore = ['/.swp$']
+
+set path+=**
+set wildmenu
+
+nnoremap ; :
