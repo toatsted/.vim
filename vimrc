@@ -11,8 +11,6 @@ Plugin 'VundleVim/Vundle.vim'
 
 " VUNDLE INSTALLED PLUGINS
 
-  " auto pair brackets
-  Plugin 'jiangmiao/auto-pairs'
   " bottom bar helper boi
   Plugin 'vim-airline/vim-airline'
   " file tree
@@ -97,8 +95,8 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 let NERDTreeShowHidden=1
 let NERDTreeIgnore = ['/.swp$']
 
-" change leader to space
-let mapleader="\<Space>"
+" change leader to ,
+let mapleader=','
 
 set path+=**
 set wildmenu
