@@ -1,13 +1,13 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 " Install Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-
 
 " VUNDLE INSTALLED PLUGINS
 
@@ -35,9 +35,18 @@ Plugin 'VundleVim/Vundle.vim'
   Plugin 'mustache/vim-mustache-handlebars'
   " git interaction 
   Plugin 'tpope/vim-fugitive'
+  " fuzzy finder
+  Plugin 'kien/ctrlp.vim'
+  " tab insert-mode autocomplete
+  Plugin 'ervandew/supertab'
+  " easymotion
+  Plugin 'easymotion/vim-easymotion'
+  " indent guides
+  Plugin 'nathanaelkane/vim-indent-guides'
+  " git NERDTree plugin
+  Plugin 'xuyuanp/nerdtree-git-plugin'
 
 " =====================
-
 
 " Pass the path to set the runtimepath properly.
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
@@ -87,6 +96,9 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " show hidden files in NERDTree by default
 let NERDTreeShowHidden=1
 let NERDTreeIgnore = ['/.swp$']
+
+" change leader to space
+let mapleader="\<Space>"
 
 set path+=**
 set wildmenu
