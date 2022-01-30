@@ -29,12 +29,12 @@ Plugin 'VundleVim/Vundle.vim'
   Plugin 'christoomey/vim-tmux-navigator'
   " auto align stuff with :Tab
   Plugin 'godlygeek/tabular'
-  " .bf syntax hilighting
-  Plugin 'Beerstorm/vim-brainfuck'
   " commenting [gc]
   Plugin 'tpope/vim-commentary'
   " handlebars syntax hilighting
   Plugin 'mustache/vim-mustache-handlebars'
+  " git interaction 
+  Plugin 'tpope/vim-fugitive'
 
 " =====================
 
